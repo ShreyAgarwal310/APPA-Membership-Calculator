@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPA Membership Fee Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>APPA Membership Fee Calculator</h1>
+    <form id="feeCalculator">
+        <!-- Institution Type Selection Dropdown -->
+        <label for="institutionType">Institution Type:</label>
+        <select id="institutionType">
+            <option value="four-year">Four-Year Higher Education</option>
+            <option value="two-year">Two-Year Higher Education</option>
+            <option value="k-12">K-12</option>
+            <option value="affiliate">Affiliate</option>
+            <option value="library">Library</option>
+            <option value="museum">Museum</option>
+            <option value="system-district">System District</option>
+            <option value="international">International</option>
+            <option value="retired">Retired</option>
+            <option value="emeritus">Emeritus</option>
+            <option value="student">Student</option>
+            <option value="business-partner">Business Partner</option>
+        </select>
+
+        <!-- Four Year Parameters -->
+        <label for="fie">Four-Year Full-Time Enrollment (FTE):</label>
+        <select id="fie" disabled></select>
+
+        <label for="gie">Four-Year Gross Institutional Expenditures (GIE):</label>
+        <select id="gie" disabled></select>
+
+        <!-- Two Year Parameters -->
+        <label for="gieTwoYear">Two-Year Gross Institutional Expenditures (GIE):</label>
+        <select id="gieTwoYear" disabled></select>
+
+        <!-- Business Partner Level -->
+        <label for="businessLevel">Business Partner Level:</label>
+        <select id="businessLevel" disabled></select>
+
+        <!-- Region Select -->
+        <label for="region">Region:</label>
+        <select id="region"></select>
+
+        <button type="button" onclick="calculateFee()">Calculate Fee</button>
+    </form>
+
+    <!-- Result Section -->
+    <div id="result">
+        <h2>Calculation Result</h2>
+        <p id="nationalFee">National Fee: $0.00</p>
+        <p id="regionalFee">Regional Fee: $0.00</p>
+        <p id="totalFee">Total Fee: $0.00</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
